@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+WELCOME USER! You've reached the source code for a manual created by STS. If you plan on updating or editing this manual, then you're in the right place!
+Before editing this manual, please read through the manual editing guide at https://sts.doit.wisc.edu/manuals/manual-editing-guide/ and follow its recommendations. It is important that we adhere to the conventions set in the guide in order to maintain quality and consistency across all manuals.
+A few things to note:
+* In order to have a working preview with accurate CSS and functional JavaScript, you will need a copy of the /master-files folder in the same parent directory as the folder with your manual editing files in it, e.g. if you have a folder on your desktop "STS Manuals", and you're editing the Excel 1 manual in the "excel1" folder and the Photoshop 1 folder in the "photoshop1" folder, you will need to have the "master-files" folder in "STS Manuals" as well, since the manual files link to the CSS/Javascript using relative links. Your folder will look like this: 
+├STS Manuals 
+├╴╴excel1
+├╴╴╴╴╴images
+├╴╴╴╴╴class_files
+├╴╴master-files
+├╴╴photoshop1
+├╴╴╴╴╴images
+├╴╴╴╴╴class_files
+* Manuals should be arranged into Topics, which are enclosed in the <section class="topic"> tag, and followed immediately by an <h1> tag with the topic name in it, e.g.
+<section class="topic">
+<h1>Topic name</h1>
+<p>Neat and helpful information goes here</p>
+</section>
+the <section class="topic"> and following <h1> element are how the manual's JavaScript automagically builds the Topics outline and creates the links, so if they are not there, the manual will be without a table of contents and its friends will probably make fun of it (which is decidedly not cool).
+* Unless you are changing the contents of the <title></title> tag, you should not have to touch the <head> portion of this document (unless instructed to do so). this tag connects the HTML to the CSS and JavaScript that keep the manual functioning. Look for the comment tag that says "MAIN CONTENT", and you may edit there.
+Good luck, and have fun!
+-->
+
+<head>
+
+    <!-- Manual title -->
+    <title>MATLAB1</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Software manual provided by Software Training for Students at the University of Wisconsin.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' id='uwmadison-fonts-css' href='https://brand.wisc.edu/content/themes/uw-theme/dist/fonts/uw160/fonts.css?ver=1.1.1' type='text/css' media='all' />
+    <link rel="stylesheet" type="text/css" href="../master-files/css/stylesheet.css">
+    <script src="../master-files/highlight.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../master-files/smooth-scroll.js"></script>
+    <script src="../master-files/primary-functions.js"></script>
+    <script src="../master-files/ga.js"></script>
+
+</head>
+
+<body>
+    <!-- begin front page -->
+
+    <div class="manual-front-page">
+        <div id="coverpage-title">
+            <h1>MATLAB1</h1>
+            <h2>Introduction to MATLAB</h2>
+        </div>
+        <div id="about-page"></div>
+        <div id="outline"></div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <section class="topic">
+        <h1>Intro to MATLAB</h1>
+        <img src="images/01-matlab-logo.jpg" alt="MATLAB logo with its name "Matlab" on the left">
+        <p>MATLAB is an advanced computing environment that is used in a diverse array of applications: mathematics, signal processing, control design, financial modeling, statistical analysis and computational biology. MATLAB contains an interactive environment to perform calculations and data analysis, and to create graphs, pictures and movies. Additionally, MATLAB contains a programming language that allows one to create reusable functions, procedures and algorithms. MATLAB gets its name from “MATrix LABoratory” and fittingly, matrices are the basis of almost all of MATLAB’s calculations. this class will work through the basics of using the MATLAB interface and basic syntax of the programming language.</p>
+        <p>Make sure to <strong>download the Class Files</strong> for this course from the Canvas page before you continue on.</p>
+    </section>
+
+    <section class="topic">
+        <h1>MATLAB Interface</h1>
+        <p>the MATLAB interface consists of different panels, which can be moved about the screen. Some panels may be combined in one window and their names are shown on different tabs. Clicking on a tab will bring that panel to the front. Different panels can be managed from the layout menu in the environment tab at the top of the screen. the default interface varies between versions of MATLAB</p>
+
+        <h2>Launching MATLAB</h2>
+        <ol>
+        	<li>
+        		<p>Click the Windows Start icon on the bottom left corner of the screen.</p>
+        	</li>
+        	<li>
+        		<p>Type MATLAB into the search bar and click on “MATLAB 2018a”. A window like the one below will be seen.</p>
+        	</li>
+        </ol>
+
+        <img src="images/02-matlab-interface.jpg" alt="MATLAB interface" style="width:40rem;height:25rem">
+
+        <h2>MATLAB Environment</h2>
+        <h3>Command Window</h3>
+        <p>the Command Window is the <Strong>main screen</Strong> of MATLAB. this is the area where calculations are entered and instructions are given to MATLAB. It also displays the results of the calculations and any errors in your code.</p>
+        <img src="images/03-command-window1.jpg" alt="MATLAB command window">
+
+        <br>
+        <h2>Workspace</h2>
+        <p>
+        	the Workspace panel shows all of the variables that MATLAB currently has stored. the panel also gives information about the value or size of the variable, and a description if one exists. 
+        </p>
+        <img src="images/04-matlab-workspace.JPG" alt="MATLAB workspace" style="width:20rem;height:22rem">
+        <p>
+        	Double clicking on any variable will open a spreadsheet that shows what the variable contains and allows you one way to edit the variable.
+        </p>
+        <img src="images/05-workspace-spreadsheet.JPG" alt="spreadsheet of a variable in MATLAB workspace" style="width: 38rem; height: 20rem">
+       
+        <h2>Command History</h2>
+        <p>the Command History panel shows all of the instructions and/or calculations that have been entered in the Command Window. Double clicking on any line in the Command History will rerun that command.</p>
+        <p>To display the Command History go to the environment panel towards the upper middle part of the screen. Select <Strong>Layout > Command History > Docked.</Strong></p>
+        <img src="images/06-command-history.JPG" alt="command history of MATLAB" style="width: 20rem; height: 18rem">
+        
+        <div class="shortcut">
+		    <p>enter <STRONG>commandhistory</STRONG> in the command window</p>
+            <img src="images/08-command-history-shortcut.JPG" alt="shortcut to access MATLAB command history" style="width: 10rem: height: 2rem">
+		</div>      
+
+        <h2>Current Folder</h2>
+        <p>the Current Folder panel shows all of the user files and functions that are available for MATLAB to access. the Current Directory can be changed by entering a new path in the <Strong>Current Folder box</Strong> at the top left of the screen.</p>
+        <img src="images/07-current-folder.JPG" alt="current folder of MATLAB interface" style="width: 20rem; height: 18rem">
+    </section>
+
+    <section class="topic">
+        <h1>M Code</h1>
+        <h2>Basic Operators</h2>
+        <p>the simplest use of MATLAB and M Code is using the Command Window as a calculator.</p>
+        <p>At the command prompt, enter 2 + 5</p>
+        <img src="images/09-calculate.jpg" alt="2+5=7 is shown in MATLAB command window" style="width: 12rem; height: 12rem">
+        <p>You can see that MATLAB responds with the answer. Notice that <Strong>extra whitespace is ignored in MATLAB</Strong>. MATLAB can understand all of the basic operators.</p>
+        <p>Try entering some of these:</p>
+        <ul>
+            <li>9000 - 523</li>
+            <li>50 * 25</li>
+            <li>30 / 10</li>
+            <li>30 ^ 2 + 25</li>
+        </ul>
+        <div class="good-to-know">
+            <p>MATLAB remembers every line that you type in the command window. To access previous lines, press the up arrow at the command prompt.</p>
+        </div>  
+        <p>Additionally, MATLAB can understand more advanced operators.</p>    
+        <p>Try entering the expressions below:</p>
+        <ul>
+            <li>sin(90)</li>
+            <li>cos(sin(90^2))</li>
+            <li>atan(.5)</li>
+        </ul>
+        <img src="images/10-calculate.jpg" alt="atan(.5) = 0.4636" style="width: 12rem; height: 12rem">
+        <p>Finally, MATLAB has some built-in numbers. For instance, instead of entering 3.14159, you can just type in <span class="highlight-type">pi</span>.</p>
+        <ul>
+            <li>pi - 3.14159</li>
+            <li>eps - the floating point precision of MATLAB</li>
+            <li>inf - infinity</li>
+        </ul>
+        <h2>Storing Variables</h2>
+        <p>You may have noticed that during those operations, MATLAB returned the answer and on the line above that, it said <span class="highlight-type">ans =</span>.</p>
+        <p>Additionally, you can notice that <strong>"ans"</strong> was added to the Workspace window and its value is the result of the last operation</p>
+        <img src="images/11-ans.JPG" alt="the default variable ans with its value is shown in workspace" style="width: 20rem; height: 8rem">
+        <p>"Ans" is a default variable created by MATLAB to store the answer of the most recent operation performed in the Command Window. A variable is a reference to a memory location that contains a value. the usefulness of variables is that they can be quickly and easily referenced later. For example, it is easier to remember pi, than 3.14159.</p>
+        <p>At the command prompt, enter <strong>ans</strong>.</p>
+        <p>You can see that it displays the value held inside of that variable. You can also use "ans" in new calculations.</p>
+        <img src="images/12-enter-ans.JPG" alt="enter ans in command window and get ans=3.1416" style="width: 20rem; height: 12rem">
+        <p>In addition to the "ans" variable, you can create any variable that you want and assign it a value.</p>
+        <p>At the Command Prompt (in command window), enter <strong>radius = 5</strong></p>
+        <p>When you hit enter, you can see that instead of “ans=”, MATLAB displays the variable name and then its value.</p>
+        <p>Now enter <strong>mass = 50;</strong></p>
+        <p>Pay attention to the semicolon after <span class="highlight-type">mass = 50</span></p>
+        <p>You can see that for the "mass" variable, MATLAB didn't display anything. this is because the semicolon at the end of that line. A semicolon tells MATLAB to store the variable and not to display anything on the screen. As we work with more values, we will want to make use of the semicolon more often.</p>
+        <div class="two-up">
+            
+                <img src="images/13-semicolon.JPG" style=""alt="radius = 5 and mass = 50;">
+            
+                <div class="good-to-know" style="width: 100%">
+                    <p>It is customary to use lower case letters for variable names. If the name is multiple words, it is customary to use camelCase, meaning the first word is lowercase and every subsequent word starts with a capital letter: e.g. variableNameInCamelCase.</p>
+                    <p>MATLAB can determine the data type of any variable without any explicit definition. MATLAB variables can store Boolean, numeric or text data. the variable names are <strong>case sensitive</strong>.</p>
+                </div>   
+            </div> 
+    </section>
+
+<section class="topic">
+    <h1>Array, Vector and Matrix</h1>
+    <h2>Arrays</h2>
+    <p>Arrays are one of the basic building blocks of MATLAB. An array is a structure that allows you to store multiple values under one name. Any type (numeric, boolean, strings) of information can be stored in an array and its size is adjustable.</p>
+    <p>Visually, an array can be represented as a grid, where each cell represents an open area for information. there are many ways to create and access arrays in MATLAB.</p>
+    <img src="images/14-visual-array.jpg" alt="horizontal 4 grids with number 1, 2, 3, 4 from left to right" style="width: 15rem; height: 3rem">
+    <div class="tool-reference">
+        <h3>Array in MATLAB</h3>
+        <p>To create an array, we need to assign a list of specific values to a variable, and the format is variable = [ value1 value2 value3 ... ]</p>
+        <p>Notice that all of the values are contained within brackets and only values of the same data type (numbers, strings, etc.) can be stored in the same array.</p>
+    </div>
+
+    <h2>Making Arrays</h2>
+    <ul>
+        <li>
+            <p>One way to create an array is to type in the values individually by hand.</p>
+            <p>Let's try creating an array with name "array": </p>
+            <p>At the command prompt, enter array = [1,2,3,4,5]</p>
+            <div class="good-to-know">
+                <p>We can either use <strong>commas or whitespace</strong> to seperate different elements in an array when creating it.</p>  
+                <img src="images/15-array-by-hand.JPG" alt="array = [1,2,3,4,5] and array1 = [1 2 3 4 5]" style="width: 25rem; height: 12rem">      
+            </div>
+        </li>
+        <li>
+            <p>Another way to create an array is specifying a starting value, an increment value and an end value. MATLAB will automatically generate the values and store them in the array.</p>
+            <p>At the command prompt, enter <strong>time = [0:2:10]</strong></p>
+            <img src="images/16-array2.JPG" alt="time = [0:2:10] generates the array time = [0 2 4 6 8 10]" style="width: 35rem; height: 10rem">
+            <div class="good-to-know">
+                <p>If the increment value is 1, then it is considered the default increment value, so it doesn't need to be entered. therefore, <strong>time = [0:1:10]</strong> can be written as <strong> time = [0:10]</strong>.</p>      
+            </div>
+        </li>
+    </ul>
+
+    <h2>Matrix</h2>
+    <p>In addition to one dimensional arrays, MATLAB can also store multidimensional arrays, also known as matrices.</p>
+    <p>To create a matrix, the same notation is used; however, a <strong>semicolon</strong> within the brackets is used to separate between <strong>rows</strong> of the matrix. Let’s create a matrix.</p>
+    <p>At the command prompt, enter <strong>numbers = [1:5; 2 4 6 8 10; 1:2:9]</strong></p>
+    <img src="images/17-matrix1.jpg" alt="numbers = [1:5; 2 4 6 8 10; 1:2:9]" style="width: 35rem; height: 15rem">
+    <p>this will create a 2 dimensional matrix with <strong>5 columns and 3 rows</strong>.</p>
+    <h2>Accessing Values From Arrays And Matrices</h2>
+    <p>Unlike many other programming languages, arrays in MATLAB are 1-indexed, meaning the array starts counting at <span class="highlight-type">1</span> (rather than starting counting at 0, which is how many other popular languages work).</p>
+    <div class="tool-reference">
+        <p>To call a value from an array, type in the name of the array followed by the index you want, in parentheses, then hit "enter".</p>
+        <p>Take our array as an example, to call the first value from the array:</p>
+        <img src="images/18-index-array.JPG" alt="accessing the first value of the array we created before, which gives the answer 1" style="width: 20rem; height: 15rem">
+    </div>
+    <p>Similarly, to access a certain value from a matrix, type in the name of the matrix followed by the index you want in parentheses, but this time, the index is <em>not a single number</em> : since we have rows and columns in our matrix, we need to specify <span class="highlight-type">(row,col)</span> to get the correct value.</p>
+    <p>For example, if we want to access the value from second row, fourth column of our numbers matrix, we need to do the following:</p>
+    <img src="images/19-index-matrix.JPG" alt="to access the value of second row, fourth column from our matrix, do numbers(2,4) and get 8" style="width: 12rem; height: 8rem">
+
+    <h2>Changing Values From Arrays And Matrices</h2>
+    <p>After values have been entered, those values can be overwritten or new values can be added. To overwrite a value, simply reassign that value to something new.</p>
+    <p>Enter array(1) = 6</p>
+    <p>To enter a new value, assign the next index (remember that '='' is used to assign values to a variable).</p>
+    <p>Enter array(6) = 7</p>
+    <img src="images/20-change-array.JPG" alt="change first value of array to be 6, and add a new value 7 to the array" style="width: 20rem; height: 15rem">
+    <div class="important">
+        <p>Be careful when manually updating items in an array; it is very easy to accidentally overwrite data by making index errors!</p>
+    </div>
+    <p><strong>When you add a single value to a matrix, MATLAB keeps the matrix square and fills in the missing values with zeroes.</strong></p>
+    <img src="images/21-change-matrix.JPG" alt="assign 3 to row 5, col 5 of the numbers matrix, notice that the rest of missing values are filled with zeroes" style="width: 20rem; height: 15rem">
+
+    <h2>Deleting Values From Arrays And Matrices</h2>
+    <p>To delete a value from an array, set the value to "[]".</p>
+    <p>For example, to delete the second value from our array, simply enter <strong>array(2) = []</strong></p>
+    <img src="images/22-delete.JPG" alt="delete the second value from our array" style="width: 20rem; height: 8rem">
+    <div class="important">
+        <p>MATLAB doesn’t allow you to delete a single value from a matrix, because that would result in a nonrectangular matrix. Instead, you can delete an entire row or column.</p>
+    </div>
+    <div class="tool-reference">
+        <p>the colon operator is used to refer to an entire row or column.</p>
+        <p><strong>numbers(3,:) </strong>represents the entire third row. <strong>numbers(:,2) </strong>represents the entire second column.</p>
+    </div>
+
+    <h2>Vectors</h2>
+    <p>In MATLAB, a vector is a matrix with either <strong>one</strong> row or <strong>one</strong> column. the distinction between row vectors and column vectors is essential. Many programming errors are caused by using a row vector where a column vector is required, and vice versa.</p>
+
+    <h2>Operations of Arrays And Matrices</h2>
+    <h3>Concatenating Arrays And Matrices</h3>
+    <p>Let's create a new array: <strong>concatenate = [1 2 3]</strong></p>
+    <p>Now we concatenate it with our old array to create: <strong>combined = [array concatenate]</strong></p>
+    <img src="images/23-concatenate.JPG" alt="concatenate old array with new array to get combined = [6 3 4 5 7 1 2 3]" style="width: 28rem; height: 10rem">
+    <p><em>Note that the whitespace between "array" and "concatenate" is required for concatenation!</em></p>
+    <!-- how to concatenate matrices? row,col # required? -->
+    <h3>Transposing Arrays</h3>
+    <p>We can transpose (flip the direction) of the array by typing in the name of the array and add a single quote after the name:</p>
+    <img src="images/24-tranpose.JPG" alt="transpose (or flip the direction) of the array" style="width: 10rem; height: 20rem">
+
+    <h3>Useful Operation Reference</h3>
+    <p>the reference chart below shows useful operations with arrays and matrices</p>
+    <div class="tool-reference" style="width: 100%">
+        <img src="images/25-useful-operation.JPG" alt="useful operations chart with arrays and matrices" style="width: 60rem; height: 15rem">
+    </div>
+    <p>Several important things to know:</p>
+    <ol>
+        <li>the <strong>dot</strong> operator is used whenever you want to perform something on each individual value in a matrix, instead of using the rules of matrix multiplication.</li>
+        <li>the rule of matrix multiplication: the first matrix must have the same number of columns as the second matrix has rows.</li>
+        <li>the difference between <span class="highlight-type">.'</span> and <span class="highlight-type">'</span>: <strong>.' </strong>is used to transpose (reverse column and row), whereas <strong>'</strong> is used to conjugate transpose (reverse column and row and take complex conjugate of elements)</li>
+        <div class="good-to-know">
+            <p>If you want to know more about conjugate transpose of a matrix, please refer to the link: 
+            <a href="http://mathonline.wikidot.com/the-conjugate-transpose-of-a-matrix">conjugate transpose</a></p>
+        </div>
+    </ol>
+    <!-- Fix me! -->
+    <h3>Built-In Functions</h3>
+        <p>In addition to calculations, MATLAB has many built-in functions that can return information about the array. We are just going to talk about some of the basic functions. First, say we want to sum the values in our numbers matrix. We are going to search for a function to do this sum.</p>
+        <ol class="instruction-list">
+        <li>
+            "At the Command Prompt, enter "
+            <strong>help sum</strong>
+            <p>MATLAB returns information about the function and a link to the help file that gives more information about the function. You can see that “sum” will sum across each column in a multidimensional array.</p>
+        </li>
+        <li>
+            "At the Command Prompt, enter "
+            <strong>sum(numbers)</strong>
+            <p>Some other common functions are:</p>
+            
+        </li>
+
+    </ol>
+    <table>
+                <tbody>
+                    <tr>
+                        <td>Function</td>
+                        <td>Output</td>
+                    </tr>
+                    <tr>
+                        <td>exp(x)</td>
+                        <td>exponent of x</td>
+                    </tr>
+                    <tr>
+                        <td>sqrt(x)</td>
+                        <td>square root of x</td>
+                    </tr>
+                    <tr>
+                        <td>log(x)</td>
+                        <td>equivalent to ln(x)</td>
+                    </tr>
+                    <tr>
+                        <td>log10(x)</td>
+                        <td>equivalent to log(x)</td>
+                    </tr>
+                    <tr>
+                        <td>mod(x,y)</td>
+                        <td>modulus of y divided by x</td>
+                    </tr>
+                    <tr>
+                        <td>round(x)</td>
+                        <td>x rounded to the nearest whole number</td>
+                    </tr>
+                    <tr>
+                        <td>ceil(x)</td>
+                        <td>rounds each element of X to the nearest integer greater than or equal to that element</td>
+                    </tr>
+                    <tr>
+                        <td>size(x)</td>
+                        <td>returns the number of rows and columns in the matrix</td>
+                    </tr>
+                    <tr>
+                        <td>ones(m,n)</td>
+                        <td>creates an m-by-n matrix of ones (m rows, n columns)</td>
+                    </tr>
+                    <tr>
+                        <td>zeros(m,n)</td>
+                        <td>creates an m-by-nmatrix of zeros</td>
+                    </tr>
+                    <tr>
+                        <td>length(x)</td>
+                        <td>number of elements in x</td>
+                    </tr>
+                    <tr>
+                        <td>eye(m,n)</td>
+                        <td>creates an m-by-n matrix with ones on the main diagonal and zeros elsewhere</td>
+                    </tr>
+                </tbody>
+            </table>
+        <p>For more built-in functions, refer to <a href="https://www.mathworks.com/help/simulink/referencelist.html;jsessionid=af3e3235408ba2e84666c376e7dd?type=function">this link</a></p>
+    <h3>Exercises With Answers For the Section:</h3>
+    <img src="images/26-ex1.JPG" alt="exercises for the section" style="width: 42rem; height: 12rem">
+    <img src="images/27-solution1.JPG" alt="answers for the section" style="width: 40rem; height: 55rem">
+</section>
+<section class="topic">
+    <h1>Scripts</h1>
+    <div class="tool-reference">
+        <img src="images/28-new-script.JPG" alt="new script icon for scripts">
+        <p>Scripts are MATLAB files that contain snippets of reusable code or functions. Most programming in MATLAB is done in a Script and then run in the Command Window. this is advantageous, because it is easy to go back and edit your code or make changes to values. Additionally, when you incorporate control logic or loops (which is beyond the scope of this class), Scripts are even more useful.</p>
+    </div>
+    <h2>Using Scripts</h2>
+    <p>Click the New Script button in the upper left corner of the screen. this opens up the Editor.</p>
+    <p>Enter the following code into the Script:</p>
+    <img src="images/29-sphere.JPG" alt="r = 2; A = 4*pi*r^2; V = (4/3)*pi*r^3;" style="width: 30rem; height: 15rem">
+    <p>Save the file as <strong>"sphere.m"</strong></p>
+    <p>Press the green "run" button at the top panel. You will see the names and values of our variables r, V and A appear in the workspace.</p>
+    <div class="shortcut">
+        <p>To create a new script, we can use the edit command: eidt scriptName</p>
+    </div>
+    <h2>Comments</h2>
+    <p>We can add comment to our code in script by using <strong>"%"</strong> to make our code more readable.</p>
+    <img src="images/30-comment.JPG" alt="comment to tell the radius, surface area and volume of the sphere" style="width: 35rem; height: 10rem">
+</section>
+
+<section class="topic">
+    <h1>Plotting</h1>
+    <p>Another powerful feature of MATLAB is its plotting ability. MATLAB can create a multitude of graphs, such as line graphs, bar graphs, contour graphs, 3D graphs and weather maps. MATLAB can also create movies, which are a series of graphs shown sequentially.</p>
+    <h2>2D Plotting</h2>
+    <p>Enter the following lines in the command prompt:</p>
+    <img src="images/31-2D-code.JPG" alt="x = 0:pi/100:2*pi; y = sin(x); plot(x,y)" style="width: 15rem; height: 5rem">
+    <p>And you will get:</p>
+    <img src="images/32-2D-plot1.JPG" alt="a plot of sin wave" style="width: 40rem; height: 30rem">
+    <p>You could add title, xlabel, ylabel and even legend to it using the syntax: For example: title('title name').</p>
+    <div class="important">
+        <p>the single quotes surrounding the text are required to make it work!</p>
+    </div>
+    <h2>3D Plotting</h2>
+    <p>MATLAB also allows us to plot in three dimensions. We will use some built-in functions to generate a 3D graph. the meshgrid function is used to create the arrays passed to the peaks function. the peaks function is useful for demonstrating 3D graphing; it takes two variables and creates mountains from the data. Finally, the mesh function displays the graph.</p>
+    <p>At the Command Prompt, enter [X,Y] = meshgrid(-3:.125:3);</p>
+    <p>Enter <strong>Z = peaks(X,Y);</strong></p>
+    <p>Enter <strong>mesh(X,Y,Z)</strong></p>
+    <p>the mesh function creates a wireframe mesh.</p>
+    <img src="images/33-mesh.jpg" alt="a meshgrid function graph generated by built-in function mesh" style="width: 35rem; height: 33rem">
+    <p>Enter <strong>surf(Z)</strong></p>
+    <img src="images/34-surf.jpg" alt="the surface plot generated by built-in function surf" style="width: 35rem; height: 33rem">
+    <p>the surf function is used to create a 3D surface plot. Both of the graphs represent the same data. the X and Y represent the coordinates and the Z data represents the height at each point. the color of the graph is determined by the height.</p>
+
+    <h2>Movies</h2>
+    <p>Another plotting technique in MATLAB is animating movies. Essentially, a movie in MATLAB is just a sequence of plots shown sequentially and quickly. Let’s make a movie of the distances each ball travels. To do this, we need to create a plot for each time point and store those graphs in a variable.</p>
+    <p>At the Command Prompt, enter the following:</p>
+    <ol>
+        <li>for i = 1:length(time)</li>
+        <li>plot(distance(:,1:i)’);</li>
+        <li>axis([1 11 0 35000]);</li>
+        <li>f(i) = getframe; end</li>
+    </ol>
+    <p>Let’s walk through this code. the first line starts a for loop, telling MATLAB to go through the loop for as many times as time has values.
+
+    the second line plots the first time point till the current time point. So when we go through the loop for the fifth time, for instance, the plot will show the first five time points.
+
+    the third line sets the axes to be the same on every frame of the movie. And the final line stores the graph in an array.
+
+    We now have an array f with 11 pictures in it. To play those pictures, we use the movie command.</p>
+    <p>Type <strong>movie(f)</strong></p>
+</section>
+
+<section class="topic">
+    <h1>Conclusion</h1>
+    <p>the best way to get better at MATLAB is to practice. there are some great resources within the program (like the Help menu and tutorials) that will walk through many of the different functions and syntactical intricacies of the program. Keep at it and soon you will be a MATLAB Master.</p>
+</section>
+    <!-- END MAIN CONTENT -->
+</body>
+
+</html>
