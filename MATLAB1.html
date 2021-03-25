@@ -57,7 +57,7 @@ Good luck, and have fun!
     <section class="topic">
         <h1>Intro to MATLAB</h1>
         <img src="images/01-matlab-logo.jpg" alt="MATLAB logo with its name "Matlab" on the left">
-        <p>MATLAB is an advanced computing environment that is used in a diverse array of applications: mathematics, signal processing, control design, financial modeling, statistical analysis and computational biology. MATLAB contains an interactive environment to perform calculations and data analysis, and to create graphs, pictures and movies. Additionally, MATLAB contains a programming language that allows one to create reusable functions, procedures and algorithms. MATLAB gets its name from “MATrix LABoratory” and fittingly, matrices are the basis of almost all of MATLAB’s calculations. this class will work through the basics of using the MATLAB interface and basic syntax of the programming language.</p>
+        <p>MATLAB is an advanced computing environment that is used in a diverse array of applications: mathematics, signal processing, control design, financial modeling, statistical analysis and computational biology. MATLAB contains an interactive environment to perform calculations and data analysis, and to create graphs, pictures and movies. Additionally, MATLAB contains a programming language that allows one to create reusable functions, procedures and algorithms. MATLAB gets its name from “MATrix LABoratory” and fittingly, matrices are the basis of almost all of MATLAB’s calculations. This class will work through the basics of using the MATLAB interface and basic syntax of the programming language.</p>
         <p>Make sure to <strong>download the Class Files</strong> for this course from the Canvas page before you continue on.</p>
     </section>
 
@@ -132,7 +132,7 @@ Good luck, and have fun!
             <li>cos(sin(90^2))</li>
             <li>atan(.5)</li>
         </ul>
-        <img src="images/10-calculate.jpg" alt="atan(.5) = 0.4636" style="width: 12rem; height: 12rem">
+        <img src="images/10-calculate.png" alt="atan(.5) = 0.4636" style="width: 18rem; height: 12rem">
         <p>Finally, MATLAB has some built-in numbers. For instance, instead of entering 3.14159, you can just type in <span class="highlight-type">pi</span>.</p>
         <ul>
             <li>pi - 3.14159</li>
@@ -140,9 +140,9 @@ Good luck, and have fun!
             <li>inf - infinity</li>
         </ul>
         <h2>Storing Variables</h2>
-        <p>You may have noticed that during those operations, MATLAB returned the answer and on the line above that, it said <span class="highlight-type">ans =</span>.</p>
+        <p>You may have noticed that during those operations, MATLAB returned the answer and on the line above that, it said <span class="highlight-type">ans =</span> .</p>
         <p>Additionally, you can notice that <strong>"ans"</strong> was added to the Workspace window and its value is the result of the last operation</p>
-        <img src="images/11-ans.JPG" alt="the default variable ans with its value is shown in workspace" style="width: 20rem; height: 8rem">
+        <img src="images/11-ans.png" alt="the default variable ans with its value is shown in workspace" style="width: 18rem; height: 4rem">
         <p>"Ans" is a default variable created by MATLAB to store the answer of the most recent operation performed in the Command Window. A variable is a reference to a memory location that contains a value. the usefulness of variables is that they can be quickly and easily referenced later. For example, it is easier to remember pi, than 3.14159.</p>
         <p>At the command prompt, enter <strong>ans</strong>.</p>
         <p>You can see that it displays the value held inside of that variable. You can also use "ans" in new calculations.</p>
@@ -151,7 +151,7 @@ Good luck, and have fun!
         <p>At the Command Prompt (in command window), enter <strong>radius = 5</strong></p>
         <p>When you hit enter, you can see that instead of “ans=”, MATLAB displays the variable name and then its value.</p>
         <p>Now enter <strong>mass = 50;</strong></p>
-        <p>Pay attention to the semicolon after <span class="highlight-type">mass = 50</span></p>
+        <p>Pay attention to the semicolon after <span class="highlight-type"><strong>mass = 50</strong></span></p>
         <p>You can see that for the "mass" variable, MATLAB didn't display anything. This is because of the semicolon at the end of that line. A semicolon tells MATLAB to store the variable and not to display anything on the screen. As we work with more values, we will want to make use of the semicolon more often.</p>
         <div class="two-up">
             
@@ -199,8 +199,8 @@ Good luck, and have fun!
 
     <h2>Matrix</h2>
     <p>In addition to one dimensional arrays, MATLAB can also store multidimensional arrays, also known as matrices.</p>
-    <p>To create a matrix, the same notation is used; however, a <strong>semicolon</strong> within the brackets is used to separate between <strong>rows</strong> of the matrix. Let’s create a matrix.</p>
-    <p>At the command prompt, enter <strong>numbers = [1:5; 2 4 6 8 10; 1:2:9]</strong></p>
+    <p>To create a matrix, the same notation is used; however, a <strong>semicolon</strong> within the brackets is used to separate between <strong>rows</strong> of the matrix.</p>
+    <p>Let’s create a matrix. At the command prompt, enter <strong>numbers = [1:5; 2 4 6 8 10; 1:2:9]</strong></p>
     <img src="images/17-matrix1.jpg" alt="numbers = [1:5; 2 4 6 8 10; 1:2:9]" style="width: 35rem; height: 15rem">
     <p>This will create a 2 dimensional matrix with <strong>5 columns and 3 rows</strong>.</p>
     <h2>Accessing Values From Arrays And Matrices</h2>
@@ -348,7 +348,7 @@ Good luck, and have fun!
     <h1>Scripts</h1>
     <div class="tool-reference">
         <img src="images/28-new-script.JPG" alt="new script icon for scripts">
-        <p>Scripts are MATLAB files that contain snippets of reusable code or functions. Most programming in MATLAB is done in a Script and then run in the Command Window. this is advantageous, because it is easy to go back and edit your code or make changes to values. Additionally, when you incorporate control logic or loops (which is beyond the scope of this class), Scripts are even more useful.</p>
+        <p>Scripts are MATLAB files that contain snippets of reusable code or functions. Most programming in MATLAB is done in a Script and then executed in the Command Window. this is advantageous, because it is easy to go back and edit your code or make changes to values. Additionally, when you incorporate control logic or loops (which is beyond the scope of this class), scripts are even more useful.</p>
     </div>
     <h2>Using Scripts</h2>
     <p>Click the New Script button in the upper left corner of the screen. this opens up the Editor.</p>
@@ -357,7 +357,7 @@ Good luck, and have fun!
     <p>Save the file as <strong>"sphere.m"</strong></p>
     <p>Press the green "run" button at the top panel. You will see the names and values of our variables r, V and A appear in the workspace.</p>
     <div class="shortcut">
-        <p>To create a new script, we can use the edit command: eidt scriptName</p>
+        <p>To create a new script, we can use the edit command: edit scriptName</p>
     </div>
     <h2>Comments</h2>
     <p>We can add comment to our code in script by using <strong>"%"</strong> to make our code more readable.</p>
@@ -366,13 +366,13 @@ Good luck, and have fun!
 
 <section class="topic">
     <h1>Plotting</h1>
-    <p>Another powerful feature of MATLAB is its plotting ability. MATLAB can create a multitude of graphs, such as line graphs, bar graphs, contour graphs, 3D graphs and weather maps. MATLAB can also create movies, which are a series of graphs shown sequentially.</p>
+    <p>Another powerful feature of MATLAB is its plotting ability. MATLAB can create a multitude of graphs, such as line graphs, bar graphs, contour graphs, 3D graphs and weather maps. MATLAB can also create movies, which are a series of graphs being shown sequentially.</p>
     <h2>2D Plotting</h2>
     <p>Enter the following lines in the command prompt:</p>
     <img src="images/31-2D-code.JPG" alt="x = 0:pi/100:2*pi; y = sin(x); plot(x,y)" style="width: 15rem; height: 5rem">
     <p>And you will get:</p>
     <img src="images/32-2D-plot1.JPG" alt="a plot of sin wave" style="width: 40rem; height: 30rem">
-    <p>You could add title, xlabel, ylabel and even legend to it using the syntax: For example: title('title name').</p>
+    <p>You could add title, xlabel, ylabel and even legend to it using the MATLAB syntax. For example, to add a title to a graph, type: title('title name').</p>
     <div class="important">
         <p>The single quotes surrounding the text are required to make it work!</p>
     </div>
@@ -402,13 +402,13 @@ Good luck, and have fun!
 
     The third line sets the axes to be the same on every frame of the movie. And the final line stores the graph in an array.
 
-    We now have an array f with 11 pictures in it. To play those pictures, we use the movie command.</p>
+    We now have an array f with 11 pictures in it. To play those pictures, we use the <strong>movie</strong> command.</p>
     <p>Type <strong>movie(f)</strong></p>
 </section>
 
 <section class="topic">
     <h1>Conclusion</h1>
-    <p>the best way to get better at MATLAB is to practice. there are some great resources within the program (like the Help menu and tutorials) that will walk through many of the different functions and syntactical intricacies of the program. Keep at it and soon you will be a MATLAB Master.</p>
+    <p>The best way to get better at MATLAB is to practice. There are some great resources within the program (like the help menu and tutorials) that will walk through many of the different functions and syntactic intricacy of the program. Keep practicing and soon you will become a MATLAB Master.</p>
 </section>
     <!-- END MAIN CONTENT -->
 </body>
